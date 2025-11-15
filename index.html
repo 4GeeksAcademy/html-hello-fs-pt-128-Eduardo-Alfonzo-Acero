@@ -14,108 +14,134 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="card mt-3">
-            <div class="card-header">
-                <p class="fs-2 p-2">Payment form example</p>
+    <div class="container pt-3">
+        <div class="card">
+            <div class="card-header fs-4">
+                <strong>Payment for Example</strong>
             </div>
-            <div class="alert alert-danger m-3" role="alert">
-                Some fields are missing
-            </div>
-
-
-
-            <form class="row g-2">
-
-                <div class=" col-md-5 mb-3 p-1 m-2">
-                    <label for="inputCard" class="form-label">Card#</label>
-                    <input type="password" class="form-control" id="inputCard" placeholder="XXXXXX">
-                </div>
-
-                <div class=" col-md-4 mb-3 p-1 m-2">
-                    <label for="inputCvc" class="form-label">CVC#</label>
-                    <input type="password" class="form-control" id="inputCvc" placeholder="0000">
-                </div>
-
-                <div class=" col-md-2 mb-3 p-1 m-2">
-                    <label for="inputAmount" class="form-label">Amount</label>
-                    <input type="text" class="form-control" id="inputAmount" placeholder="Amount">
-                </div>
-
-                <div class="col-md-5 mb-3 p-1 m-2">
-                    <label for="inputFirtsName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="inputFirtsName">
-                </div>
-
-                <div class="col-md-6 mb-3 p-1 m-2">
-                    <label for="inputLastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName">
-                </div>
-                <div class="col-md-5 mb-3 p-1 m-2">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
-
-                <div class="col-md-3 mb-3 p-1 m-3">
-                    <label for="selectState">State</label>
-                    <select class="form-select" id="selectState">
-                        <option selected disabled value="">Pick a State</option>
-                        <option value="New York">New York</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Alaska">Alaska</option>
-                    </select>
-                </div>
-
-                <div class="col-md-3 mb-3 p-1 m-2">
-                    <label for="inputPostalCode" class="form-label">Postal Code</label>
-                    <input type="text" class="form-control" id="inputPostalCode">
-                </div>
-
-                <div class="col-md-5 mb-3 p-1 m-2">
-                    <label class="form-label">We Accept</label>
-
-                    <div class="d-flex align-items-center gap-4">
-
-                        <label class="form-check-label d-flex align-items-center">
-                            <input type="radio" class="form-check-input me-2" name="payment" id="visa" value="visa">
-                            <i class="fa-brands fa-cc-visa fs-3"></i>
-                        </label>
-
-
-                        <label class="form-check-label d-flex align-items-center">
-                            <input type="radio" class="form-check-input me-2" name="payment" id="efectivo"
-                                value="efectivo">
-                            <i class="fa-solid fa-money-bill-1 fs-3"></i>
-                        </label>
+            <div class="card-body">
+                <form class="row">
+                    <div class="col-12 p-2 alert alert-danger" role="alert">
+                        Some fields are missing
                     </div>
 
-                </div>
-                <div class="col-md-5 mb-3 p-1 m-2">
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                            style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Comments</label>
+                    <div class="col-md-5">
+                        <label for="inpuPassword" class="form-label">Card#</label>
+                        <input type="password" id="inpuPassword" class="form-control mb-3" name="Card#"
+                            placeholder="XXXXXX" required>
                     </div>
 
-                </div>
 
+                    <div class="col-md-3">
+                        <label for="inputCVC" class="form-label">CVC</label>
+                        <input type="text" id="inputCVC" class="form-control mb-3" name="CVC" placeholder=0000 required>
+                    </div>
 
-            </form>
-            <div class="card-footer text-body-secondary d-flex justify-content-end gap-2">
-                <button type="button" class="btn btn-secondary">Cancel</button>
-                <button type="button" class="btn btn-primary">Send</button>
+                    <div class="col-md-4">
+                        <label for="inputAmount" class="form-label">Amount</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
+                            <input type="text" class="form-control" id="inputAmount" name="Amount" placeholder="Amount">
+                            <div class="invalid-feedback">
+                                Please enter an amount.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputName" class="form-label">Name</label>
+                        <input type="text" class="form-control mb-3" id="inputName" name="Name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputLastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control mb-3" id="inputLastName" name="LastName">
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control mb-3" id="inputCity">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">State</label>
+                        <select class="form-select">
+                            <option selected disabled>Select State</option>
+                            <option>Florida</option>
+                            <option>New York</option>
+                            <option>California</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inpuPostalCode" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control mb-3" id="inpuPostalCode" required>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-between">
+                        <div class="mb-3  ">
+                            <label class="form-label">We Accept</label>
+                            <div class="d-flex justify-content-between text-white gap-2 bg-secondary p-2 rounded">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                    <label class="form-check-label" for="radioDefault1">
+                                        <i class="fa-solid fa-building-columns"></i>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2">
+                                    <label class="form-check-label" for="radioDefault2">
+                                        <i class="fa-brands fa-cc-visa"></i>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault3">
+                                    <label class="form-check-label" for="radioDefault3">
+                                        <i class="fa-brands fa-cc-mastercard"></i>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault4">
+                                    <label class="form-check-label" for="radioDefault4">
+                                        <i class="fa-brands fa-cc-amex"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-md-6">
+                            <label class="form-label">Message</label>
+                            <div class=""></div>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">Comments</label>
+                            </div>
+                            <div class="form-text text-color-secondary">
+                                Add any note here
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end gap-2 mt-5">
+                        <button type="reset" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+
             </div>
+
+
         </div>
+    </div>
+    </div>
+    </div>
 
 
 
 
 
 
-        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-            </script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
 
 </body>
 
